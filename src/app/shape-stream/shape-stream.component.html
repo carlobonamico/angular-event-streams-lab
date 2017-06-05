@@ -1,0 +1,21 @@
+<p>
+  {{name}} Stream
+</p>
+<span *ngFor="let shape of shapes" >
+  {{shape.id }}
+  <svg width="40" height="40">
+    <rect *ngIf="shape.type=='rect'" 
+          x="3" y="3" 
+          width="24" height="24" 
+          [style.stroke]="shape.color"
+          class="basic-shape"
+             >
+    </rect>
+    <circle *ngIf="shape.type=='circle'" 
+            cx="15" cy="15" 
+            r="12"
+            [style.stroke]="shape.color"
+            class="basic-shape">
+    </circle>
+  </svg>
+</span>
